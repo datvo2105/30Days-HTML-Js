@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 6 with HTML, CSS, Js</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css">
+  <body>
+    <div class="keyDown__wait">Press any key</div>
+    <div class="keyDown__info hide">
+        <div class="keyDown__alert"></div>
+        <div class="keyDown__box">
+            <div class="keyDown key">
+                <p class="item__name">Key</p>
+                <p class="item__value"></p>
+            </div>
+            <div class="keyDown location">
+                <p class="item__name">Location</p>
+                <p class="item__value"></p>
+            </div> <div class="keyDown which">
+                <p class="item__name">Which</p>
+                <p class="item__value"></p>
+            </div> <div class="keyDown code">
+                <p class="item__name">Code</p>
+                <p class="item__value"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const wait = document.querySelector(".keyDown__wait");
+        const info = document.querySelector(".keyDown__info");
+        const alertInfo = document.querySelector(".keyDown__alert");
+
+        const keyValue = document.querySelector(".keyDown.key .item__value");
+        const locationValue = document.querySelector(".keyDown.location .item__value");
+        const whichValue = document.querySelector(".keyDown.which .item__value");
+        const codeValue = document.querySelector(".keyDown.code .item__value");
+
+        document.addEventListener("keydown", function (e) {
+            alertInfo.innerHTML = e.which;
+
+            keyValue.innerHTML = e.key;
+            locationValue.innerHTML = e.location;            
+            whichValue.innerHTML = e.which;            
+            codeValue.innerHTML = e.code;            
+
+            wait.classList.add("hide");
+            info.classList.remove("hide");
+        })
+    </script>
+  </body>
+</html>

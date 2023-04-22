@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    rgb(131, 58, 180),
+    rgb(253, 29, 29),
+    rgb(252, 176, 69)
+  );
+}
+
+.openModal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.openModal:hover {
+  opacity: 0.9;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  animation: modalShow 0.5s ease;
+}
+
+.modal__header,
+.modal__body,
+.modal__footer {
+  padding: 15px;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(184, 51, 51);
+}
+
+.modal__header .modal__header--close {
+  transition: 0.25s;
+}
+
+.modal__header .modal__header--close:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(0.8);
+}
+
+.modal__body {
+  font-size: 20px;
+}
+
+.modal__body .modal__body--title {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(184, 51, 51);
+}
+
+.modal__footer {
+  text-align: right;
+}
+
+.modal__footer--close {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid rgb(184, 51, 51);
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: rgb(184, 51, 51);
+  transition: 0.5s;
+}
+
+.modal__footer--close:hover {
+  opacity: 0.8;
+  background-color: transparent;
+  color: rgb(184, 51, 51);
+}
+
+@keyframes modalShow {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top right, #005aa7, #fffde4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none !important;
+}
+
+.keyDown__wait {
+  background-color: #fff;
+  color: #266faf88;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.keyDown__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.keyDown__alert {
+  border: 7px solid #fff;
+  border-radius: 50%;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 100%;
+  padding: 40px;
+}
+
+.keyDown__box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.keyDown {
+  width: 200px;
+  background-color: #415b71;
+  border-radius: 8px;
+  margin: 20px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.keyDown .item__name,
+.keyDown .item__value {
+  padding: 5px 0;
+}
+
+.keyDown .item__value {
+  background-color: #fff;
+  color: #415b71;
+}
